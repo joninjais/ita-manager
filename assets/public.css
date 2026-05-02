@@ -1,0 +1,207 @@
+/* ─── ITA Manager Frontend Styles ───────────────────────────────────── */
+/* ใช้ .ita-container เป็น scope เพื่อป้องกัน conflict กับ Elementor */
+
+.ita-container,
+.ita-container *,
+.ita-container *::before,
+.ita-container *::after {
+    box-sizing: border-box;
+}
+
+.ita-container ul,
+.ita-container ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ── Tab Navigation ── */
+.ita-tab-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0073aa;
+    padding-bottom: 0;
+}
+.ita-tab-btn {
+    padding: 8px 20px;
+    border: 2px solid #0073aa;
+    border-bottom: none;
+    border-radius: 4px 4px 0 0;
+    background: #fff;
+    color: #0073aa;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background .15s, color .15s;
+    margin-bottom: -2px;
+}
+.ita-tab-btn:hover,
+.ita-tab-btn.active {
+    background: #0073aa;
+    color: #fff;
+}
+
+.ita-tab-panel { display: none; }
+.ita-tab-panel.active { display: block; }
+
+/* ── Indicator ── */
+.ita-indicator {
+    margin-bottom: 14px;
+    border: 1px solid #d5e3f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+}
+
+.ita-indicator-hdr {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #005a8e 0%, #0073aa 100%);
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+}
+.ita-indicator-hdr:hover { background: linear-gradient(135deg, #004e7a 0%, #006497 100%); }
+.ita-ind-badge {
+    background: rgba(255,255,255,.2);
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.ita-ind-title {
+    flex: 1;
+    font-weight: 600;
+    font-size: 15px;
+}
+.ita-ind-arrow {
+    transition: transform .2s;
+    font-size: 12px;
+}
+
+.ita-indicator-bdy { padding: 12px 16px; background: #f9fbfd; }
+
+/* ── MOIT ── */
+.ita-moit {
+    margin-bottom: 10px;
+    border: 1px solid #e0eaf4;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.ita-moit-hdr {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #eaf2f8;
+    cursor: pointer;
+    user-select: none;
+}
+.ita-moit-hdr:hover { background: #d9eaf5; }
+.ita-moit-badge {
+    background: #0073aa;
+    color: #fff;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+.ita-moit-ttl {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.ita-moit-bdy { padding: 10px 14px; background: #fff; }
+
+/* ── Item List ── */
+.ita-item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.ita-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 10px;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+.ita-item:last-child { border-bottom: none; }
+.ita-item:hover { background: #f8f9fa; }
+
+.ita-item-num {
+    color: #0073aa;
+    font-weight: 700;
+    white-space: nowrap;
+    min-width: 36px;
+}
+.ita-item-desc { flex: 1; }
+
+/* Section header item */
+.ita-item--section {
+    background: #eaf2f8;
+    border-left: 3px solid #0073aa;
+    padding: 8px 12px;
+    border-bottom: 1px solid #cde3f3;
+    display: block;
+}
+.ita-section-label {
+    font-weight: 600;
+    color: #004f7a;
+    font-size: 14px;
+}
+
+/* Indentation (รองรับ 5 ระดับ) */
+.ita-item--indent-1 { padding-left: 28px; }
+.ita-item--indent-2 { padding-left: 46px; }
+.ita-item--indent-3 { padding-left: 64px; }
+.ita-item--indent-4 { padding-left: 82px; }
+.ita-item--indent-5 { padding-left: 100px; }
+.ita-item--indent-1 .ita-item-num,
+.ita-item--indent-2 .ita-item-num,
+.ita-item--indent-3 .ita-item-num,
+.ita-item--indent-4 .ita-item-num,
+.ita-item--indent-5 .ita-item-num { color: #0088cc; }
+
+.ita-item-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    background: #0073aa;
+    color: #fff !important;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background .15s;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+.ita-item-link:hover { background: #005a8e; }
+
+.ita-no-data {
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+    padding: 16px 0;
+    font-size: 14px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .ita-item { flex-wrap: wrap; }
+    .ita-item-link { margin-left: 0; margin-top: 4px; }
+    .ita-tab-btn { font-size: 13px; padding: 6px 14px; }
+}

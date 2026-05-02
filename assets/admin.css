@@ -1,0 +1,275 @@
+/* ─── ITA Manager Admin Styles ─────────────────────────────────────── */
+
+.ita-wrap { max-width: 1200px; }
+
+/* Year Bar */
+.ita-year-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 16px 0;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+.ita-year-tabs { display: flex; gap: 6px; flex-wrap: wrap; flex: 1; }
+.ita-year-tab {
+    padding: 6px 18px;
+    border: 2px solid #0073aa;
+    border-radius: 4px;
+    background: #fff;
+    color: #0073aa;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .15s;
+}
+.ita-year-tab:hover,
+.ita-year-tab.active {
+    background: #0073aa;
+    color: #fff;
+}
+.ita-btn-add-year { white-space: nowrap; }
+
+/* Year Header */
+.ita-year-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #0073aa;
+}
+.ita-year-header h2 { margin: 0; color: #0073aa; font-size: 22px; }
+.ita-year-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Empty State */
+.ita-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: #888;
+}
+.ita-empty-state p { font-size: 16px; }
+
+/* ─── Indicator Card ─────────────────────────────────────────────────── */
+.ita-indicator-card {
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    overflow: hidden;
+}
+.ita-indicator-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #f0f5fa;
+    border-bottom: 1px solid #d5e3f0;
+    cursor: pointer;
+}
+.ita-indicator-header:hover { background: #e5eef7; }
+.ita-indicator-badge {
+    background: #0073aa;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+.ita-indicator-name { flex: 1; font-weight: 600; font-size: 15px; }
+.ita-indicator-toggle { color: #0073aa; font-size: 18px; transition: transform .2s; }
+.ita-indicator-header.collapsed .ita-indicator-toggle { transform: rotate(-90deg); }
+.ita-indicator-body { padding: 16px; }
+.ita-indicator-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+/* ─── MOIT Card ──────────────────────────────────────────────────────── */
+.ita-moit-card {
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+.ita-moit-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 14px;
+    background: #fafbfc;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.ita-moit-header:hover { background: #f4f5f7; }
+.ita-moit-badge {
+    background: #259b24;
+    color: #fff;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-top: 2px;
+}
+.ita-moit-title { flex: 1; font-size: 14px; line-height: 1.4; }
+.ita-moit-toggle { color: #555; font-size: 16px; transition: transform .2s; margin-top: 2px; }
+.ita-moit-header.collapsed .ita-moit-toggle { transform: rotate(-90deg); }
+.ita-moit-body { padding: 12px 14px; }
+.ita-moit-toolbar {
+    display: flex;
+    justify-content: flex-end;
+    gap: 6px;
+    margin-bottom: 10px;
+}
+
+/* ─── Item List ──────────────────────────────────────────────────────── */
+.ita-items-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+.ita-items-table th {
+    background: #f8f9fa;
+    padding: 8px 10px;
+    text-align: left;
+    border-bottom: 2px solid #dee2e6;
+    color: #495057;
+    white-space: nowrap;
+}
+.ita-items-table td {
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+.ita-items-table tr:hover td { background: #f9f9f9; }
+.ita-item-no  { width: 70px; font-weight: 600; color: #0073aa; }
+.ita-item-ttl { }
+.ita-item-file { width: 200px; }
+.ita-item-file a {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: #0073aa;
+    text-decoration: none;
+    word-break: break-all;
+}
+.ita-item-file a:hover { text-decoration: underline; }
+.ita-item-sort {
+    width: 80px;
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+.ita-sort-row { display: flex; align-items: center; justify-content: center; gap: 4px; }
+.ita-sort-num { font-weight: 600; min-width: 18px; text-align: center; }
+.ita-move-btns { display: flex; flex-direction: row; align-items: center; gap: 2px; }
+.ita-move-up, .ita-move-down {
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 0 4px;
+    font-size: 10px;
+    line-height: 18px;
+    cursor: pointer;
+    color: #555;
+    width: 22px;
+    text-align: center;
+}
+.ita-move-up:hover:not(:disabled), .ita-move-down:hover:not(:disabled) {
+    background: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+.ita-move-up:disabled, .ita-move-down:disabled { opacity: 0.25; cursor: default; }
+.ita-item-actions { width: 120px; text-align: center; white-space: nowrap; }
+.ita-item-actions .button { padding: 2px 8px; font-size: 11px; }
+
+/* Section header row */
+.ita-row-section td { background: #f0f4f8; }
+.ita-section-cell {
+    padding: 8px 14px !important;
+    font-size: 13px;
+    color: #1a4f7a;
+    border-left: 3px solid #0073aa;
+}
+.ita-section-icon {
+    font-size: 14px !important;
+    vertical-align: middle;
+    margin-right: 6px;
+    color: #0073aa;
+}
+
+/* Indentation for sub-items (รองรับ 5 ระดับ) */
+.ita-depth-1 td { background: #fafeff; }
+.ita-depth-1 .ita-item-no { padding-left: 18px !important; }
+.ita-depth-2 td { background: #f5fbff; }
+.ita-depth-2 .ita-item-no { padding-left: 36px !important; }
+.ita-depth-3 td { background: #f0f9ff; }
+.ita-depth-3 .ita-item-no { padding-left: 54px !important; }
+.ita-depth-4 td { background: #eaf7ff; }
+.ita-depth-4 .ita-item-no { padding-left: 72px !important; }
+.ita-depth-5 td { background: #e5f4ff; }
+.ita-depth-5 .ita-item-no { padding-left: 90px !important; }
+
+/* Empty items */
+.ita-no-items { text-align: center; color: #aaa; padding: 20px; font-style: italic; }
+
+/* ─── Modal ──────────────────────────────────────────────────────────── */
+.ita-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ita-modal-content {
+    background: #fff;
+    border-radius: 8px;
+    padding: 24px 28px;
+    width: 550px;
+    max-width: 95vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 8px 30px rgba(0,0,0,.2);
+}
+.ita-modal-wide { width: 700px; }
+.ita-modal-content h2 { margin: 0 0 16px; font-size: 18px; border-bottom: 1px solid #eee; padding-bottom: 12px; }
+.ita-modal-footer { display: flex; gap: 8px; margin-top: 20px; justify-content: flex-end; padding-top: 16px; border-top: 1px solid #eee; }
+
+/* Confirm-delete modal input */
+#ita-confirm-delete-input { width: 100%; }
+#ita-confirm-delete-input.ita-input-error { border-color: #c0392b; box-shadow: 0 0 0 1px #c0392b; }
+#ita-confirm-delete-ok { transition: opacity .15s; }
+#ita-confirm-delete-ok:disabled { opacity: .45; cursor: not-allowed; }
+
+/* File row */
+.ita-file-row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.ita-file-row input { flex: 1; min-width: 200px; }
+
+/* Notice */
+.ita-notice {
+    padding: 10px 16px;
+    border-radius: 4px;
+    margin: 10px 0;
+    font-weight: 500;
+}
+.ita-notice.success { background: #d4edda; color: #155724; border-left: 4px solid #28a745; }
+.ita-notice.error   { background: #f8d7da; color: #721c24; border-left: 4px solid #dc3545; }
+
+/* Loading spinner */
+.ita-loading { opacity: .6; pointer-events: none; }
+.ita-spinner { display: inline-block; width: 16px; height: 16px; border: 2px solid #ccc; border-top-color: #0073aa; border-radius: 50%; animation: spin .6s linear infinite; vertical-align: middle; margin-right: 6px; }
+@keyframes spin { to { transform: rotate(360deg); } }
