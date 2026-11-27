@@ -1,9 +1,8 @@
 <?php
 /**
  * Plugin Name: ITA Manager
- * Plugin URI:  https://192.168.1.91/
  * Description: จัดการข้อมูล ITA (การประเมินคุณธรรมและความโปร่งใส) ทั้งหมดในหน้าเดียว รองรับหลายปีงบประมาณ
- * Version:     1.0.0
+ * Version:     1.0.1
  * Author:      Admin
  * Text Domain: ita-manager
  */
@@ -19,12 +18,15 @@ define( 'ITA_MANAGER_URL', plugin_dir_url( __FILE__ ) );
 require_once ITA_MANAGER_PATH . 'includes/class-ita-db.php';
 require_once ITA_MANAGER_PATH . 'includes/class-ita-admin.php';
 require_once ITA_MANAGER_PATH . 'includes/class-ita-shortcode.php';
+require_once plugin_dir_path(__FILE__) . 'includes/class-ita-copy-structure.php';
+
 
 register_activation_hook( __FILE__, array( 'ITA_DB', 'install' ) );
 
 function ita_manager_init() {
     ITA_DB::maybe_upgrade();
-
+    ITA_Copy_Structure::init();
+    
     $admin = new ITA_Admin();
     $admin->init();
 
