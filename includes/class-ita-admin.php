@@ -191,7 +191,8 @@ class ITA_Admin {
 
                     <div class="ita-year-header">
                         <h2 id="ita-year-heading"></h2>
-                        <div class="ita-year-actions">
+                        <div class="ita-year-actions">                           
+                            <?php ITA_Copy_Structure::render_button(); ?>  
                             <button class="button ita-btn-edit-year" id="btn-edit-year">
                                 <span class="dashicons dashicons-edit"></span> แก้ไขปี
                             </button>
