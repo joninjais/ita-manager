@@ -18,7 +18,7 @@ define( 'ITA_MANAGER_URL', plugin_dir_url( __FILE__ ) );
 require_once ITA_MANAGER_PATH . 'includes/class-ita-db.php';
 require_once ITA_MANAGER_PATH . 'includes/class-ita-admin.php';
 require_once ITA_MANAGER_PATH . 'includes/class-ita-shortcode.php';
-require_once plugin_dir_path(__FILE__) . 'includes/class-ita-copy-structure.php';
+require_once ITA_MANAGER_PATH . 'includes/class-ita-copy-structure.php';
 
 
 register_activation_hook( __FILE__, array( 'ITA_DB', 'install' ) );
